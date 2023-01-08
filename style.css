@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "PT Serif", serif;
+    font-size: 1.3rem;
+    color: black;
+}
+
+body.nightmode {
+    color: silver;
+    background: black;
+}
+
+.toggle,
+.print {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.print {
+    top: 10rem;
+    text-align: center;
+}
+
+.toggle:before {
+    display: block;
+    text-align: center;
+    content: "Aa";
+}
+
+body:not(.nightmode) .toggle:before,
+body:not(.nightmode) .print {
+    background: black;
+    color: silver;
+}
+
+body:not(.nightmode) .print a {
+    color: silver;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nightmode .toggle:before {
+    background: silver;
+    color: black;
+}
+
+.nightmode .print {
+    background: silver;
+    color: black;
+}
+
+.nightmode .print a {
+    color: black;
+}
+
+.nightmode .print a:hover {
+    color: cadetblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 0.5em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0 0;
+}
+
+h1 + h2 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+h3 > span {
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+
+h3 a {
+    color: cadetblue;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+header ul {
+    display: flex;
+    flex-dire: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0 1em 0 0;
+}
+
+header ul li a {
+    color: cadetblue;
+}
+
+section {
+    margin: 2rem auto;
+    max-width: 30rem;
+}
+
+section:first-of-type h2 {
+    text-align: center;
+    margin: 3rem 0 1rem;
+}
+
+section:first-of-type ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+section:first-of-type li {
+    list-style: none;
+    margin: 0 1em 0.5rem 0;
+    text-align: center;
+}
+
+section:first-of-type span {
+    display: block;
+    text-align: center;
+    width: 3em;
+    height: 3em;
+    line-height: 2.5em;
+    margin: 0 auto;
+    border: 0.3em solid;
+    border-radius: 3em;
+    font-weight: 700;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-size: 1.2em;
+}
+
+section article {
+    margin: 1rem 0 2rem;
+}
+
+@media print {
+    body.nightmode {
+        color: black;
+        background: transparent;
+    }
+
+    .toggle,
+    .print {
+        visibility: hidden;
+    }
+}
+
+.profileImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,309 @@
+:root {
+    --black: #2d2b2f;
+    --white: #d9dadd;
+    --gray: #d0d1d3;
+    --darkgray: #747476FF;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Work Sans", serif;
+    color: var(--black);
+    background-color: var(--white);
+
+}
+
+main {
+
+}
+
+
+/* -------- global classes -------- */
+
+.nightMode {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+.headerContainer {
+    padding: 10px 60px;
+
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--black);
+}
+
+.nightMode .headerContainer {
+    border-bottom: 1px solid var(--white);
+   
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.hyperLink {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+.contactIcon {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.nightMode .contactIcon {
+    filter: invert(97%) sepia(4%) saturate(141%) hue-rotate(188deg) brightness(91%) contrast(92%);
+
+}
+
+
+/* -------- header section -------- */
+
+.userDetailsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--black);
+    padding: 40px 60px;
+}
+
+.nightMode .userDetailsContainer {
+    border-bottom: 1px solid var(--white);
+}
+
+
+.userDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameText {
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--darkgray);
+
+}
+
+.nightMode .nameText {
+    color: var(--white);
+}
+
+.firstName {
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.nightMode .firstName {
+    color: var(--white);
+}
+
+.jobTitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--black);
+    padding-top: 10px;
+}
+
+.nightMode .jobTitle {
+    color: var(--white);
+}
+
+.userContactDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.userContactDetailsWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contactDetailsText {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: var(--black);
+
+}
+
+.nightMode .contactDetailsText {
+    color: var(--white);
+}
+
+
+/* -------- details section -------- */
+.detailsSection {
+    display: flex;
+    gap: 70px;
+    padding: 30px 60px 60px 60px;
+}
+
+.profileContainer {
+    background-color: var(--gray);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nightMode .profileContainer {
+    background-color: #d0d1d308;
+}
+
+
+.profilePictureContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profilePictureWrapper {
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nightMode .profilePictureWrapper {
+    border: 2px solid var(--white);
+}
+
+
+.profilePicture {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.skillSectionWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillSectionTitle {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.skillSectionText {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.workDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+}
+
+
+.jobContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: justify;
+    padding: 0px 30px;
+    border-left: 1px solid var(--black);
+}
+
+.nightMode .jobContainer {
+    border-left: 1px solid var(--white);
+}
+
+
+.jobInterval {
+
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+.jobName {
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+
+.employerName {
+
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.jobDescriptionContainer {
+}
+
+.jobDescriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.jobDescription {
+
+}
+
+
+/* -------- media section -------- */
+
+@media print {
+    body.nightMode {
+        color: var(--black);
+        background: transparent;
+    }
+
+    .headerContainer,
+    .toggle,
+    .print {
+        visibility: hidden;
+    }
+
+    .detailsSection {
+        display: flex;
+        gap: 70px;
+        padding: 30px 0px 60px 0px;
+    }
+
+    .userDetailsContainer {
+        padding: 0px 0px 40px 0px;
+    }
+}
