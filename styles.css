@@ -229,7 +229,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /*text-align: justify;*/
+    text-align: justify;
 
 
 }
@@ -311,14 +311,16 @@ main {
         visibility: hidden;
     }
 
-    .detailsSection {
-        gap: 20px;
-        padding: 20px 30px 30px 10px;
-    }
 
     .userDetailsContainer {
-        padding: 0px 30px 30px 30px;
+        padding: 0px 30px 20px 30px;
     }
+
+    .detailsSection {
+        /*gap: 20px;*/
+        padding: 20px 30px 20px 30px;
+    }
+
 
     .jobWrapper > div:last-child {
         margin-top: 200px;
