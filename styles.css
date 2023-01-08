@@ -5,6 +5,10 @@
     --darkgray: #747476FF;
 }
 
+@page {
+    size: auto;
+    margin: 0mm;
+}
 
 * {
     box-sizing: border-box;
@@ -45,7 +49,7 @@ main {
 
 .nightMode .headerContainer {
     border-bottom: 1px solid var(--white);
-   
+
 }
 
 .toggle {
@@ -225,7 +229,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: justify;
+    /*text-align: justify;*/
+
+
+}
+
+
+.jobWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*text-align: justify;*/
 }
 
 
@@ -233,7 +247,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    text-align: justify;
+    /*text-align: justify;*/
     padding: 0px 30px;
     border-left: 1px solid var(--black);
 }
@@ -298,12 +312,15 @@ main {
     }
 
     .detailsSection {
-        display: flex;
-        gap: 70px;
-        padding: 30px 0px 60px 0px;
+        gap: 20px;
+        padding: 20px 30px 30px 10px;
     }
 
     .userDetailsContainer {
-        padding: 0px 0px 40px 0px;
+        padding: 0px 30px 30px 30px;
+    }
+
+    .jobWrapper > div:last-child {
+        margin-top: 200px;
     }
 }
