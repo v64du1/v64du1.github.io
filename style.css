@@ -1,3 +1,15 @@
+:root {
+    --black: #2d2b2f;
+    --white: #d9dadd;
+    --gray: #d0d1d3;
+    --darkgray: #747476FF;
+}
+
+@page {
+    size: auto;
+    margin: 0mm;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,178 +17,331 @@
 }
 
 html {
-    font-family: "PT Serif", serif;
-    font-size: 1.3rem;
-    color: black;
+    font-family: "Work Sans", serif;
+    color: var(--black);
+    background-color: var(--white);
+
 }
 
-body.nightmode {
-    color: silver;
-    background: black;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-.toggle,
-.print {
-    display: block;
-    cursor: pointer;
-    position: fixed;
-    right: 0;
-    top: 5rem;
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
+
+/* -------- global classes -------- */
+
+.nightMode {
+    background-color: var(--black);
+    color: var(--white);
 }
 
-.print {
-    top: 10rem;
-    text-align: center;
-}
 
-.toggle:before {
-    display: block;
-    text-align: center;
-    content: "Aa";
-}
+.headerContainer {
+    padding: 10px 60px;
 
-body:not(.nightmode) .toggle:before,
-body:not(.nightmode) .print {
-    background: black;
-    color: silver;
-}
-
-body:not(.nightmode) .print a {
-    color: silver;
-    display: block;
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--black);
 }
 
-.nightmode .toggle:before {
-    background: silver;
-    color: black;
+.nightMode .headerContainer {
+    border-bottom: 1px solid var(--white);
+
 }
 
-.nightmode .print {
-    background: silver;
-    color: black;
+.toggle {
+    cursor: pointer;
 }
 
-.nightmode .print a {
-    color: black;
-}
-
-.nightmode .print a:hover {
-    color: cadetblue;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Fira Sans Extra Condensed", sans-serif;
-    font-weight: 500;
-    text-align: left;
-    margin: 0 0 0.5em;
-    line-height: 1.2;
-}
-
-h1 {
-    font-weight: 700;
-    text-align: center;
-    margin: 1rem 0 0;
-}
-
-h1 + h2 {
-    text-align: center;
-    font-size: 1rem;
-}
-
-h3 > span {
-    font-size: 0.6em;
-    vertical-align: middle;
-}
-
-h3 a {
-    color: cadetblue;
+.hyperLink {
+    border: 0;
+    outline: none;
     text-decoration: none;
-    border-bottom: 1px dashed;
 }
 
-header ul {
+.contactIcon {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.nightMode .contactIcon {
+    filter: invert(97%) sepia(4%) saturate(141%) hue-rotate(188deg) brightness(91%) contrast(92%);
+
+}
+
+
+/* -------- header section -------- */
+
+.userDetailsContainer {
+    width: 100%;
     display: flex;
-    flex-dire: row;
+    align-items: center;
+    justify-content: space-between;
+
     flex-wrap: wrap;
+
+
+    border-bottom: 1px solid var(--black);
+    padding: 40px 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .userDetailsContainer {
+        gap: 40px;
+    }
+}
+
+.nightMode .userDetailsContainer {
+    border-bottom: 1px solid var(--white);
+}
+
+
+.userDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameText {
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--darkgray);
+
+}
+
+.nightMode .nameText {
+    color: var(--white);
+}
+
+.firstName {
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.nightMode .firstName {
+    color: var(--white);
+}
+
+.jobTitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--black);
+    padding-top: 10px;
+}
+
+.nightMode .jobTitle {
+    color: var(--white);
+}
+
+.userContactDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.userContactDetailsWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contactDetailsText {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: var(--black);
+
+}
+
+.nightMode .contactDetailsText {
+    color: var(--white);
+}
+
+
+/* -------- details section -------- */
+.detailsSection {
+    display: flex;
+    gap: 70px;
+    padding: 30px 60px 60px 60px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .detailsSection {
+        flex-wrap: wrap;
+        padding: 30px 30px 30px 30px;
+    }
+}
+
+.profileContainer {
+    background-color: var(--gray);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nightMode .profileContainer {
+    background-color: #d0d1d308;
+}
+
+
+.profilePictureContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profilePictureWrapper {
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-header ul li {
-    list-style: none;
-    margin: 0 1em 0 0;
+.nightMode .profilePictureWrapper {
+    border: 2px solid var(--white);
 }
 
-header ul li a {
-    color: cadetblue;
+
+.profilePicture {
+    border-radius: 50%;
+    width: 100px;
 }
 
-section {
-    margin: 2rem auto;
-    max-width: 30rem;
-}
-
-section:first-of-type h2 {
-    text-align: center;
-    margin: 3rem 0 1rem;
-}
-
-section:first-of-type ul {
+.skillSectionWrapper {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 0 1rem;
-    padding: 0;
+    flex-direction: column;
 }
 
-section:first-of-type li {
-    list-style: none;
-    margin: 0 1em 0.5rem 0;
-    text-align: center;
+.skillSectionTitle {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-section:first-of-type span {
-    display: block;
-    text-align: center;
-    width: 3em;
-    height: 3em;
-    line-height: 2.5em;
-    margin: 0 auto;
-    border: 0.3em solid;
-    border-radius: 3em;
-    font-weight: 700;
-    font-family: "Fira Sans Extra Condensed", sans-serif;
-    font-size: 1.2em;
+.skillSectionText {
+    font-size: 17px;
+    letter-spacing: 1px;
 }
 
-section article {
-    margin: 1rem 0 2rem;
+.workDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
 }
+
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*text-align: justify;*/
+
+
+}
+
+
+.jobWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*text-align: justify;*/
+}
+
+
+.jobContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /*text-align: justify;*/
+    padding: 0px 30px;
+    border-left: 1px solid var(--black);
+}
+
+.nightMode .jobContainer {
+    border-left: 1px solid var(--white);
+}
+
+
+.jobInterval {
+
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+.jobName {
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+
+.employerName {
+
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.jobDescriptionContainer {
+}
+
+.jobDescriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.jobDescription {
+
+}
+
+
+/* -------- media section -------- */
 
 @media print {
-    body.nightmode {
-        color: black;
+    body.nightMode {
+        color: var(--black);
         background: transparent;
     }
 
+    .headerContainer,
     .toggle,
     .print {
         visibility: hidden;
     }
-}
 
-.profileImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+    .userDetailsContainer {
+        padding: 0px 30px 20px 30px;
+    }
+
+    .detailsSection {
+        padding: 20px 30px 20px 30px;
+    }
+
+
+    .jobWrapper > div:nth-child(3) {
+        margin-top: 80px;
+
+    }
 }
