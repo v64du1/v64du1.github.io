@@ -24,7 +24,8 @@ html {
 }
 
 main {
-
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -81,8 +82,17 @@ main {
     align-items: center;
     justify-content: space-between;
 
+    flex-wrap: wrap;
+
+
     border-bottom: 1px solid var(--black);
     padding: 40px 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .userDetailsContainer {
+        gap: 40px;
+    }
 }
 
 .nightMode .userDetailsContainer {
@@ -161,6 +171,15 @@ main {
     display: flex;
     gap: 70px;
     padding: 30px 60px 60px 60px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .detailsSection {
+        flex-wrap: wrap;
+        padding: 30px 30px 30px 30px;
+    }
 }
 
 .profileContainer {
@@ -229,7 +248,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: justify;
+    /*text-align: justify;*/
 
 
 }
@@ -322,7 +341,8 @@ main {
     }
 
 
-    .jobWrapper > div:last-child {
-        margin-top: 200px;
+    .jobWrapper > div:nth-child(3) {
+        margin-top: 80px;
+
     }
 }
