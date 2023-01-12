@@ -238,6 +238,11 @@ main {
     letter-spacing: 1px;
 }
 
+.skillSectionTextField {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
 .workDetailsContainer {
     display: flex;
     flex-direction: column;
@@ -343,5 +348,8 @@ main {
     .jobWrapper > div:nth-child(3) {
         margin-top: 80px;
 
+    }
+    .skillSectionTextField{
+        margin-top: 80px;
     }
 }
