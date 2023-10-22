@@ -334,8 +334,7 @@ main {
     .print {
         visibility: hidden;
     }
-
-
+    
     .userDetailsContainer {
         padding: 0px 30px 20px 30px;
     }
@@ -349,7 +348,17 @@ main {
         margin-top: 80px;
 
     }
-    .skillSectionTextField{
-        margin-top: 80px;
+
+    .jobWrapper > div:last-child {
+        margin-top: 170px;
+
+    }
+
+
+    /*.skillSectionTextField {*/
+    /*    margin-top: 80px;*/
+    /*}*/
+    .profileContainer > div:last-child {
+        margin-top: 170px;
     }
 }
